@@ -1,5 +1,5 @@
 /*
- * 	full Screen Image 1.0 - jQuery plugin
+ *  full Screen Image 1.1 - jQuery plugin
  *	written by Weboniselab
  *	http://www.webonise.com
  *
@@ -10,32 +10,36 @@
  *
  */
 (function($) {
+    "use strict";
     var obj = $([]);
     var tempOptions;
     $(window).bind('resize.fullScreenImage', function(){
-        if (!obj.length) return;
-        obj.fullScreenImage();
+        if (obj.length){
+            obj.fullScreenImage();
+        }
     });
     $('img.fsi').load(function(){
-        if (!obj.length) return;
+        if (obj.length){
         obj.fullScreenImage();
+        }
     });
     $.fn.fullScreenImage = function(options){
-        if(typeof options === 'undefined')
+        if(typeof options === 'undefined'){
             options = tempOptions;
-        else
+        }
+        else {
             tempOptions = options;
+        }
 
     var defaults = {
-        imageHeight: 		1000,
-        imageWidth: 		1600,
-        verticalSpace:		0,
+        imageHeight:        1000,
+        imageWidth:         1600,
+        verticalSpace:      0,
         horizontalSpace:    0
     };
-    var options = $.extend(defaults,options);
+    options = $.extend(defaults,options);
     this.each(function(){
     obj = $(this);
-        var img = $('img', obj);
     var fullScreenImage = $('img.fsi');
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
@@ -43,7 +47,10 @@
     var objWidth = windowWidth - options.horizontalSpace;
     var heightDifference;
     var widthDifference;
-
+    var imageNewWidth;
+    var imageNewHeight;
+    var imageTopMinusMargin;
+    var imageLeftMinusMargin;
     obj.css({
         height:objHeight,
         width:objWidth,
@@ -59,57 +66,57 @@
         heightDifference = windowHeight - options.imageHeight;
     }else{
         heightDifference = options.imageHeight - windowHeight;
-    };
+    }
     if(options.imageWidth <= windowWidth){
         widthDifference = windowWidth - options.imageWidth;
     }else{
         widthDifference = options.imageWidth - windowWidth;
     }
     if(widthDifference <= heightDifference){
-        var imageNewWidth = (windowHeight / options.imageHeight)*options.imageWidth;
+        imageNewWidth = (windowHeight / options.imageHeight)*options.imageWidth;
         if(imageNewWidth < windowWidth){
-            var imageNewHeight = (windowWidth / options.imageWidth)*options.imageHeight;
-            var imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
+            imageNewHeight = (windowWidth / options.imageWidth)*options.imageHeight;
+            imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
             fullScreenImage.css({
                 height:imageNewHeight,
                 width:windowWidth,
                 top:imageTopMinusMargin,
                 left:0
-            })
+            });
 
         }else{
-        var imageLeftMinusMargin = -((imageNewWidth - windowWidth)/2);
+        imageLeftMinusMargin = -((imageNewWidth - windowWidth)/2);
         fullScreenImage.css({
             height:windowHeight,
             width:imageNewWidth,
             left:imageLeftMinusMargin,
             top:0
-        })
+        });
         }
     }else{
-        var imageNewHeight = (windowWidth / options.imageWidth)*options.imageHeight;
+        imageNewHeight = (windowWidth / options.imageWidth)*options.imageHeight;
         if(imageNewHeight < windowHeight){
-            var imageNewWidth = (windowHeight / options.imageHeight)*options.imageWidth;
-            var imageLeftMinusMargin = -((imageNewWidth - windowWidth)/2);
+            imageNewWidth = (windowHeight / options.imageHeight)*options.imageWidth;
+            imageLeftMinusMargin = -((imageNewWidth - windowWidth)/2);
             fullScreenImage.css({
                 height:windowHeight,
                 width:imageNewWidth,
                 left:imageLeftMinusMargin,
                 top:0
-            })
+            });
 
         }else{
-        var imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
+        imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
         fullScreenImage.css({
             height:imageNewHeight,
             width:windowWidth,
             top:imageTopMinusMargin,
             left:0
-        })
+        });
         }
     }
     return obj;
-    })
+    });
 
-    }
+    };
 })(jQuery);
