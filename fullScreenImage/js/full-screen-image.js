@@ -34,8 +34,8 @@
     var defaults = {
         imageHeight:        1000,
         imageWidth:         1600,
-        verticalSpace:      0,
-        horizontalSpace:    0
+        horizontalSpace:      0,
+        verticalSpace:    0
     };
     options = $.extend(defaults,options);
     this.each(function(){
@@ -43,8 +43,8 @@
     var fullScreenImage = $('img.fsi');
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
-    var objHeight = windowHeight - options.verticalSpace;
-    var objWidth = windowWidth - options.horizontalSpace;
+    var objHeight = windowHeight - options.horizontalSpace;
+    var objWidth = windowWidth - options.verticalSpace;
     var heightDifference;
     var widthDifference;
     var imageNewWidth;
