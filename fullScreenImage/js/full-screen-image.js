@@ -3,7 +3,7 @@
  *	written by Weboniselab
  *	http://www.webonise.com
  *
- *	Copyright (c) 2009 Weboniselab (http://www.webonise.com)
+ *	Copyright (c) 2013 Weboniselab (http://www.webonise.com)
  *
  *	Built for jQuery library
  *	http://jquery.com
@@ -34,8 +34,10 @@
     var defaults = {
         imageHeight:        1000,
         imageWidth:         1600,
-        horizontalSpace:      0,
-        verticalSpace:    0
+        verticalSpace:      0,
+        horizontalSpace:    0,
+        verticalPosition:   'center',
+        horizontalPosition:   'center'
     };
     options = $.extend(defaults,options);
     this.each(function(){
@@ -77,21 +79,49 @@
         if(imageNewWidth < windowWidth){
             imageNewHeight = (windowWidth / options.imageWidth)*options.imageHeight;
             imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
+
             fullScreenImage.css({
                 height:imageNewHeight,
                 width:windowWidth,
                 top:imageTopMinusMargin,
                 left:0
             });
+            if(!(options.verticalPosition == 'center')){
+
+                if(options.verticalPosition == 'top'){
+                    fullScreenImage.css({
+                        top:0
+                    });
+                }else if(options.verticalPosition == 'bottom'){
+                    fullScreenImage.css({
+                        top: 'auto',
+                        bottom:0
+                    });
+                }
+            }
 
         }else{
-        imageLeftMinusMargin = -((imageNewWidth - windowWidth)/2);
-        fullScreenImage.css({
-            height:windowHeight,
-            width:imageNewWidth,
-            left:imageLeftMinusMargin,
-            top:0
-        });
+            imageLeftMinusMargin = -((imageNewWidth - windowWidth)/2);
+            fullScreenImage.css({
+                height:windowHeight,
+                width:imageNewWidth,
+                left:imageLeftMinusMargin,
+                top:0
+            });
+
+            if(!(options.horizontalPosition == 'center')){
+
+                if(options.horizontalPosition == 'left'){
+                    fullScreenImage.css({
+                        left:0
+                    });
+                }else if(options.horizontalPosition == 'right'){
+                    fullScreenImage.css({
+                        left: 'auto',
+                        right:0
+                    });
+                }
+            }
         }
     }else{
         imageNewHeight = (windowWidth / options.imageWidth)*options.imageHeight;
@@ -105,14 +135,41 @@
                 top:0
             });
 
+            if(!(options.horizontalPosition == 'center')){
+
+                if(options.horizontalPosition == 'left'){
+                    fullScreenImage.css({
+                        left:0
+                    });
+                }else if(options.horizontalPosition == 'right'){
+                    fullScreenImage.css({
+                        left: 'auto',
+                        right:0
+                    });
+                }
+            }
+
         }else{
-        imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
-        fullScreenImage.css({
-            height:imageNewHeight,
-            width:windowWidth,
-            top:imageTopMinusMargin,
-            left:0
-        });
+            imageTopMinusMargin = -((imageNewHeight - windowHeight)/2);
+            fullScreenImage.css({
+                height:imageNewHeight,
+                width:windowWidth,
+                top:imageTopMinusMargin,
+                left:0
+            });
+            if(!(options.verticalPosition == 'center')){
+
+                if(options.verticalPosition == 'top'){
+                    fullScreenImage.css({
+                        top:0
+                    });
+                }else if(options.verticalPosition == 'bottom'){
+                    fullScreenImage.css({
+                        top: 'auto',
+                        bottom:0
+                    });
+                }
+            }
         }
     }
     return obj;

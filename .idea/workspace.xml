@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f42fffe-103b-4b15-95af-9eeaf84af9ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullScreenImage/vertical-space-demo.html" />
+      <change type="DELETED" beforePath="E:\jQuery-plugins\fullScreenImage\vertical-space-demo.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullScreenImage/index.html" afterPath="$PROJECT_DIR$/fullScreenImage/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullScreenImage/js/full-screen-image.js" afterPath="$PROJECT_DIR$/fullScreenImage/js/full-screen-image.js" />
     </list>
@@ -29,25 +31,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fullScreenImage/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="171" selection-end="171" vertical-scroll-proportion="-3.2692308">
+            <state line="24" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="-15.692307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vertical-space-demo.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fullScreenImage/vertical-space-demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="32" selection-start="487" selection-end="487" vertical-scroll-proportion="0.575188">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="full-screen-image.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="full-screen-image.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fullScreenImage/js/full-screen-image.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="16" selection-start="872" selection-end="872" vertical-scroll-proportion="-4.06">
+            <state line="173" column="5" selection-start="5415" selection-end="5415" vertical-scroll-proportion="5.5178237">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -68,9 +61,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fullScreenImage/js/full-screen-image.js" />
-        <option value="$PROJECT_DIR$/fullScreenImage/index.html" />
         <option value="$PROJECT_DIR$/fullScreenImage/vertical-space-demo.html" />
+        <option value="$PROJECT_DIR$/fullScreenImage/index.html" />
+        <option value="$PROJECT_DIR$/fullScreenImage/js/full-screen-image.js" />
       </list>
     </option>
   </component>
@@ -267,26 +260,19 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fullScreenImage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="-15.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fullScreenImage/js/full-screen-image.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="872" selection-end="872" vertical-scroll-proportion="-4.06">
+        <state line="173" column="5" selection-start="5415" selection-end="5415" vertical-scroll-proportion="5.5178237">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullScreenImage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="171" selection-end="171" vertical-scroll-proportion="-3.2692308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullScreenImage/vertical-space-demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="487" selection-end="487" vertical-scroll-proportion="0.575188">
-          <folding />
         </state>
       </provider>
     </entry>
