@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Full Screen Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="pagination">
+        <span class="prev"><a href=#><< Prev</a></span>
+        <span class="next" style="margin-left:20px"><a href=#>Next >></a></span>
+    </div>
+</div>
+<div class="cycle-slideshow"  data-cycle-prev=".prev"
+     data-cycle-next=".next">
+    <img  src="http://jquery.malsup.com/cycle2/images/p1.jpg">
+    <img  src="http://jquery.malsup.com/cycle2/images/p2.jpg">
+    <img  src="http://jquery.malsup.com/cycle2/images/p3.jpg">
+    <img  src="http://jquery.malsup.com/cycle2/images/p4.jpg">
+</div>
+
+
+
+
+
+<script src="js/jquery1.9.1.min.js"></script>
+<script src="js/full-screen-image.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".cycle-slideshow").fullScreenImage({
+            imageHeight: 		750,
+            imageWidth: 		1000,
+            verticalPosition:   'center',
+            horizontalPosition:   'right'
+            //verticalSpace: 100
+        });
+    });
+</script>
+
+</body>
+</html>

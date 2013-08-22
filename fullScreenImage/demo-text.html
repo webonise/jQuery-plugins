@@ -4,16 +4,30 @@
     <meta charset="utf-8">
     <title>Full Screen Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+        .content h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 100px;
+            font-size: 60px;
+        }
     </style>
 </head>
 <body>
 <div class="slide">
-    <img class="fsi" src="img/lighthouse.jpg" alt="test">
+    <img class="fsi" src="img/lighthouse.jpg" alt="test" />
+    <div class="content">
+        <h1>Full Screen Image With Text</h1>
+    </div>
 </div>
 <script src="js/jquery1.9.1.min.js"></script>
 <script src="js/full-screen-image.js"></script>
@@ -22,8 +36,10 @@
         $(".slide").fullScreenImage({
             imageHeight: 		1440,
             imageWidth: 		2560,
-            verticalSpace:      100,
-            horizontalSpace: 100
+//            verticalSpace:      100,
+//            horizontalSpace: 100,
+            verticalPosition:   'center',
+            horizontalPosition:   'left'
         });
     });
 </script>

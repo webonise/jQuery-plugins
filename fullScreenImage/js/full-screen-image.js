@@ -42,7 +42,7 @@
     options = $.extend(defaults,options);
     this.each(function(){
     obj = $(this);
-    var fullScreenImage = $('img.fsi');
+    var fullScreenImage = obj.find('img');
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
     var objHeight = windowHeight - options.horizontalSpace;
