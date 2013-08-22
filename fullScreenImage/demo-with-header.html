@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Full Screen Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar navbar-static-top" >
+    <div class="navbar-inner">
+        <div class="container" >
+            <a class="brand" href="#">Title</a>
+            <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="slide">
+
+    <img class="fsi" src="img/lighthouse.jpg" alt="test">
+    <div class="content">
+        <p>asdasdasd</p>
+    </div>
+</div>
+<div class="navbar navbar-static-top" >
+    <div class="navbar-inner">
+        <div class="container" >
+            <a class="brand" href="#">Title</a>
+            <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="slide">
+
+    <img class="fsi" src="img/lighthouse.jpg" alt="test">
+    <div class="content">
+        <p>asdasdasd</p>
+    </div>
+</div>
+<script src="js/jquery1.9.1.min.js"></script>
+<script src="js/full-screen-image.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".slide").fullScreenImage({
+            imageHeight: 		1439,
+            imageWidth: 		2560,
+            horizontalSpace: 41
+            //verticalSpace: 100
+        });
+    });
+</script>
+
+</body>
+</html>
