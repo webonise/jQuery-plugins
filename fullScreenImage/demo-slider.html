@@ -16,6 +16,20 @@
             height: 100%;
             z-index: 1000;
         }
+        .prev {
+
+        }
+        .next {
+
+        }
+        .cycle-pager span{
+            font-size: 60px;
+            color: gray;
+            cursor: pointer;
+        }
+        .cycle-pager .cycle-pager-active {
+            color: #8b4513;
+        }
     </style>
 </head>
 <body>
@@ -24,9 +38,11 @@
         <span class="prev"><a href=#><< Prev</a></span>
         <span class="next" style="margin-left:20px"><a href=#>Next >></a></span>
     </div>
+    <div class="cycle-pager"></div>
+
 </div>
 <div class="cycle-slideshow"  data-cycle-prev=".prev"
-     data-cycle-next=".next">
+     data-cycle-next=".next"  data-cycle-pager=".cycle-pager">
     <img  src="http://jquery.malsup.com/cycle2/images/p1.jpg">
     <img  src="http://jquery.malsup.com/cycle2/images/p2.jpg">
     <img  src="http://jquery.malsup.com/cycle2/images/p3.jpg">
