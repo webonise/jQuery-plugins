@@ -196,12 +196,14 @@ blockquote {
 }
 
 ul, ol, dl {
-  margin-bottom: 15px
+  margin-bottom: 15px;
+
 }
 
 ul li {
   list-style: inside;
   padding-left: 20px;
+  list-style: none;
 }
 
 ol li {
@@ -369,59 +371,32 @@ Full-Width Styles
 #footer_wrap {
   background: #212121;
 }
-
-
-
-/*******************************************************************************
-Small Device Styles
-*******************************************************************************/
-
-@media screen and (max-width: 480px) {
-  body {
-    font-size:14px;
-  }
-
-  #downloads {
-    display: none;
-  }
-
-  .inner {
-    min-width: 320px;
-    max-width: 480px;
-  }
-
-  #project_title {
-  font-size: 32px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 21px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
-
-  h5 {
-    font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12px;
-  }
-
-  code, pre {
-    min-width: 320px;
-    max-width: 480px;
-    font-size: 11px;
-  }
-
+.accord a , .accord1 a, .accord2 a, .accord3 a, .accord4 a{
+    text-align: left;
+    padding-left: 10px;
+    position: relative;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background: url("../images/accordion-bg.jpg") repeat-x;
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+#main_content .accord a:hover, #main_content .accord1 a:hover, #main_content .accord2 a:hover,
+#main_content .accord3 a:hover, #main_content .accord4 a:hover{
+    color: #bbbbbb;
+    text-shadow: none;
+}
+.accord a span , .accord1 a span, .accord2 a span, .accord3 a span, .accord4 a span{
+    background: url(../images/arrow-accordion-active.png) no-repeat;
+    width: 30px;
+    height: 13px;
+    float: right;
+    margin-top: 10px;
+}
+.accord a.active span, .accord1 a.active span, .accord2 a.active span,
+.accord3 a.active span, .accord4 a.active span{
+    background: url(../images/arrow-accordion.png) no-repeat;
 }
