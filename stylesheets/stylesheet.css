@@ -400,3 +400,6 @@ Full-Width Styles
 .accord3 a.active span, .accord4 a.active span{
     background: url(../images/arrow-accordion.png) no-repeat;
 }
+.plug-in-list a {
+    display: block;
+}
