@@ -403,3 +403,7 @@ Full-Width Styles
 .plug-in-list a {
     display: block;
 }
+.source pre {
+    background: none;
+    box-shadow: none;
+}
