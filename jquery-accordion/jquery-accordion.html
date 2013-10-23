@@ -7,14 +7,14 @@
     <meta name="description" content="Jquery-plugins : " />
     <title>Jquery-plugins</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/modernizr.js"></script>
     <script>
         $(document).ready(function() {
             $('.content').hide();
             $('.accord li a').click(function(){
-                $(this).addClass('active')
+                $(this).addClass('active');
                 $(this).next('.content').slideDown();
                 $(this).parents('li').siblings().find('a').removeClass('active');
                 $(this).parents('li').siblings().find('.content').slideUp();
@@ -23,8 +23,9 @@
 
 
             $('.accord1 li.active').find('.content').show();
+            $('.accord1 li.active').find('a').addClass("active");
             $('.accord1 li a').click(function(){
-                $(this).addClass('active')
+                $(this).addClass('active');
                 $(this).next('.content').slideDown();
                 $(this).parents('li').siblings().find('a').removeClass('active');
                 $(this).parents('li').siblings().find('.content').slideUp();
@@ -33,7 +34,7 @@
 
 
             $('.accord2 li a').click(function(){
-                $(this).toggleClass('active')
+                $(this).toggleClass('active');
                 $(this).next('.content').slideToggle();
                 $(this).parents('li').siblings().find('a').removeClass('active');
                 $(this).parents('li').siblings().find('.content').slideUp();
@@ -42,14 +43,14 @@
 
             $('.accord3 li a.active').next('.content').show();
             $('.accord3 li a').click(function(){
-                $(this).toggleClass('active')
+                $(this).toggleClass('active');
                 $(this).next('.content').slideToggle();
                 $(this).parents('li').siblings().find('a').removeClass('active');
                 $(this).parents('li').siblings().find('.content').slideUp();
                 return false;
             });
             $('.accord4 li a').click(function(){
-                $(this).toggleClass('active')
+                $(this).toggleClass('active');
                 $(this).next('.content').slideToggle();
                 return false;
             });
@@ -101,7 +102,7 @@
 <!-- MAIN CONTENT -->
 <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
-        <h3>Welcome to jQuery-Responsive-Full-Screen-Plugin Pages.</h3>
+        <h3>Welcome to jQuery-accordion-Plugin Pages.</h3>
 
         <div class="container">
             <h1>All closed, without Toggle</h1>
