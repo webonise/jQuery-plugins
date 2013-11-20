@@ -35,7 +35,7 @@
 
             $('.accord2 li a').click(function(){
                 $(this).toggleClass('active');
-                $(this).next('.content').slideToggle();
+                $(this).next('.content').stop().slideToggle();
                 $(this).parents('li').siblings().find('a').removeClass('active');
                 $(this).parents('li').siblings().find('.content').slideUp();
                 return false;
@@ -44,14 +44,14 @@
             $('.accord3 li a.active').next('.content').show();
             $('.accord3 li a').click(function(){
                 $(this).toggleClass('active');
-                $(this).next('.content').slideToggle();
+                $(this).next('.content').stop().slideToggle();
                 $(this).parents('li').siblings().find('a').removeClass('active');
                 $(this).parents('li').siblings().find('.content').slideUp();
                 return false;
             });
             $('.accord4 li a').click(function(){
                 $(this).toggleClass('active');
-                $(this).next('.content').slideToggle();
+                $(this).next('.content').stop().slideToggle();
                 return false;
             });
 
@@ -190,7 +190,7 @@ $(document).ready(function(){
     $('.content').hide();<br />
     $('.accord2 li a').click(function(){
     $(this).toggleClass('active')
-    $(this).next('.content').slideToggle();
+    $(this).next('.content').stop().slideToggle();
     $(this).parents('li').siblings().find('a').removeClass('active');
     $(this).parents('li').siblings().find('.content').slideUp();
     return false;
@@ -222,7 +222,7 @@ $(document).ready(function(){
     $('.accord3 li a.active').next('.content').show();<br />
     $('.accord3 li a').click(function(){
         $(this).toggleClass('active')
-        $(this).next('.content').slideToggle();
+        $(this).next('.content').stop().slideToggle();
         $(this).parents('li').siblings().find('a').removeClass('active');
         $(this).parents('li').siblings().find('.content').slideUp();
         return false;
@@ -253,7 +253,7 @@ $(document).ready(function(){
         $('.content').hide();<br />
         $('.accord4 li a').click(function(){
             $(this).toggleClass('active')
-            $(this).next('.content').slideToggle();
+            $(this).next('.content').stop().slideToggle();
             return false;
         });
     });
