@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery-plugins : " />
+    <title>Jquery-plugins</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/modernizr.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".tabs").hide();
+            $(".tabs:first").show();
+            $(".tabMenu li a").click(function () {
+                var tablink = $(this).attr('href');
+                $(".tabs").hide();
+                $(tablink).show();
+                $(this).parents(".tabMenu").find('li').removeClass("active");
+                $(this).parents(".tabMenu li").addClass("active");
+                return false;
+            });
+
+            <!-- Fade in effect-->
+            $(".tabMenu2 li a").click(function () {
+                var tablink = $(this).attr('href');
+                $(".tabs2").fadeOut();
+                $(tablink).fadeIn();
+                $(this).parents(".tabMenu2").find('li').removeClass("active");
+                $(this).parents(".tabMenu2 li").addClass("active");
+                return false;
+            });
+
+            <!--slide Effect-->
+            $(".tabs3").hide();
+            $(".tabs3:first").show();
+            $(".tabMenu3 li a").click(function () {
+                var tablink = $(this).attr('href');
+                $(".tabs3").slideUp();
+                $(tablink).slideDown();
+                $(this).parents(".tabMenu3").find('li').removeClass("active");
+                $(this).parents(".tabMenu3 li").addClass("active");
+                return false;
+            });
+
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clear{
+            clear:both;
+        }
+        ul li {
+            float: left;
+            background: #000000;
+            padding: 0;
+        }
+        li a {
+            display: block;
+            padding: 15px;
+        }
+        li.active {
+            background: #cccccc;
+            padding: 0;
+        }
+        .source {
+            position: static;
+            z-index: 1000;
+            top: 50px;
+            right: 50px;
+        }
+        pre code.python {
+            display: block;
+            padding: .2em;
+            background: #ffffff;
+            border-radius: 15px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" href="https://github.com/webonise/jQuery-plugins">View on GitHub</a>
+
+        <h1 id="project_title">Jquery Tabs</h1>
+        <h2 id="project_tagline"></h2>
+
+        <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/webonise/jQuery-plugins/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/webonise/jQuery-plugins/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <h3>Welcome to jQuery-accordion-Plugin Pages.</h3>
+
+        <div class="container">
+            <h1>Simple Tabs</h1>
+                <ul class="tabMenu">
+                    <li class="active"><a href="#tab1">Tab 1</a></li>
+                    <li><a href="#tab2">Tab 2</a></li>
+                    <li><a href="#tab3">Tab 3</a></li>
+                </ul>
+            <div class="clear"></div>
+            <div class="tabs" id="tab1">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tabs" id="tab2">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tabs" id="tab3">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="source">
+                <pre>
+                    <code class="python">
+$(document).ready(function() {
+    $(".tabs").hide();
+        $(".tabs:first").show();
+        $(".tabMenu li a").click(function () {
+            var tablink = $(this).attr('href');
+            $(".tabs").hide();
+            $(tablink).show();
+            $(this).parents(".tabMenu").find('li').removeClass("active");
+            $(this).parents(".tabMenu li").addClass("active");
+            return false;
+    });
+
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="inner">
+        <div class="container">
+            <h1>Tabs with fade Effect</h1>
+            <ul class="tabMenu2">
+                <li class="active"><a href="#tab21">Tab 1</a></li>
+                <li><a href="#tab22">Tab 2</a></li>
+                <li><a href="#tab23">Tab 3</a></li>
+            </ul>
+            <div class="clear"></div>
+            <div class="tabs2" id="tab21">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tabs2" id="tab22">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tabs2" id="tab23">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="source">
+                <pre>
+                    <code class="python">
+$(document).ready(function() {
+    $(".tabs").hide();
+    $(".tabs:first").show();
+    $(".tabMenu li a").click(function () {
+        var tablink = $(this).attr('href');
+        $(".tabs").hide();
+        $(tablink).show();
+        $(this).parents(".tabMenu").find('li').removeClass("active");
+        $(this).parents(".tabMenu li").addClass("active");
+        return false;
+    });
+
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="inner">
+        <div class="container">
+            <h1>Tabs with sliding effects</h1>
+            <ul class="tabMenu3">
+                <li class="active"><a href="#tab31">Tab 1</a></li>
+                <li><a href="#tab32">Tab 2</a></li>
+                <li><a href="#tab33">Tab 3</a></li>
+            </ul>
+            <div class="clear"></div>
+            <div class="tabs3" id="tab31">
+                <p>1) Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tabs3" id="tab32">
+                <p>2) Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="tabs3" id="tab33">
+                <p>3) Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="source">
+                <pre>
+                    <code class="python">
+$(document).ready(function() {
+    $(".tabs").hide();
+    $(".tabs:first").show();
+    $(".tabMenu li a").click(function () {
+        var tablink = $(this).attr('href');
+        $(".tabs").hide();
+        $(tablink).show();
+        $(this).parents(".tabMenu").find('li').removeClass("active");
+        $(this).parents(".tabMenu li").addClass("active");
+        return false;
+    });
+
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+        <p class="copyright">Jquery-plugins maintained by <a href="https://github.com/webonise">webonise</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+    </footer>
+</div>
+
+
+
+</body>
+</html>
