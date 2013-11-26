@@ -176,14 +176,12 @@ $(document).ready(function() {
                 <pre>
                     <code class="python">
 $(document).ready(function() {
-    $(".tabs").hide();
-    $(".tabs:first").show();
-    $(".tabMenu li a").click(function () {
+    $(".tabMenu2 li a").click(function () {
         var tablink = $(this).attr('href');
-        $(".tabs").hide();
-        $(tablink).show();
-        $(this).parents(".tabMenu").find('li').removeClass("active");
-        $(this).parents(".tabMenu li").addClass("active");
+        $(".tabs2").fadeOut();
+        $(tablink).fadeIn();
+        $(this).parents(".tabMenu2").find('li').removeClass("active");
+        $(this).parents(".tabMenu2 li").addClass("active");
         return false;
     });
 
@@ -215,17 +213,16 @@ $(document).ready(function() {
                 <pre>
                     <code class="python">
 $(document).ready(function() {
-    $(".tabs").hide();
-    $(".tabs:first").show();
-    $(".tabMenu li a").click(function () {
+    $(".tabs3").hide();
+    $(".tabs3:first").show();
+    $(".tabMenu3 li a").click(function () {
         var tablink = $(this).attr('href');
-        $(".tabs").hide();
-        $(tablink).show();
-        $(this).parents(".tabMenu").find('li').removeClass("active");
-        $(this).parents(".tabMenu li").addClass("active");
+        $(".tabs3").slideUp();
+        $(tablink).slideDown();
+        $(this).parents(".tabMenu3").find('li').removeClass("active");
+        $(this).parents(".tabMenu3 li").addClass("active");
         return false;
     });
-
 });
                     </code>
                 </pre>
