@@ -401,8 +401,7 @@ Full-Width Styles
     background: url(../jquery-accordion/images/arrow-accordion.png) no-repeat;
 }
 .plug-in-list a {
-    display: block;
-    width: 80%;
+  
 }
 .source pre {
     background: none;
