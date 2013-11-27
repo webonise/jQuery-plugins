@@ -28,6 +28,21 @@
             $(".slideDown li").mouseleave(function(){
                 $(this).find('.slideDiv').stop().animate({height: "0"}, 500);
             });
+
+            <!-- Image Zoom Effect-->
+
+            $(".imageHover img").mouseenter(function(){
+                $(this).stop().animate({
+                        width :'120%',
+                    margin: '-10% 0 0 -10%'
+                })
+            });
+            $(".imageHover img").mouseleave(function(){
+                $(this).stop().animate({
+                        width :'100%',
+                    margin: '0'
+                })
+            });
         });
     </script>
     <style>
@@ -74,6 +89,17 @@
             overflow: hidden;
             text-align: center;
             color: #ffffff;
+        }
+        .imageHover li {
+            width: 160px;
+            height: 178px;
+            overflow: hidden;
+            padding: 0;
+        }
+        .imageHover img {
+            margin: 0;
+            padding: 0;
+            max-width: 200%;
         }
 
     </style>
@@ -171,6 +197,38 @@ $(document).ready(function(){
     });
     $(".slideDown li").mouseleave(function(){
         $(this).find('.slideDiv').stop().animate({height: "0"}, 500);
+    });
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="inner">
+        <h3>Welcome to jQuery-Hover-Effects-Plugin Pages.</h3>
+
+        <div class="container">
+            <h1>Image Zoom effect on hover</h1>
+                <ul class="imageHover">
+                    <li>
+                        <img src="images/1146696_559027954134917_1369616698_n.jpg" />
+                    </li>
+                </ul>
+            <div class="source">
+                <pre>
+                    <code class="js">
+
+$(".imageHover img").mouseenter(function(){
+    $(this).stop().animate({
+        width :'120%',
+        margin: '-10% 0 0 -10%'
+        });
+    });
+    $(".imageHover img").mouseleave(function(){
+        $(this).stop().animate({
+        width :'100%',
+        margin: '0'
     });
 });
                     </code>
