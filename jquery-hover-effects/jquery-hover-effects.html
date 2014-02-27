@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/easing.js"></script>
     <script src="../js/modernizr.js"></script>
     <script>
         $(document).ready(function() {
@@ -35,13 +36,13 @@
                 $(this).stop().animate({
                         width :'120%',
                     margin: '-10% 0 0 -10%'
-                })
+                }, 400, "linear")
             });
             $(".imageHover img").mouseleave(function(){
                 $(this).stop().animate({
                         width :'100%',
                     margin: '0'
-                })
+                }, 400, "linear")
             });
         });
     </script>
@@ -260,3 +261,4 @@ $(".imageHover img").mouseenter(function(){
 
 </body>
 </html>
+
