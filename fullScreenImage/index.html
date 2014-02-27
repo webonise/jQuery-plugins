@@ -4,17 +4,54 @@
     <meta charset="utf-8">
     <title>Full Screen Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <style>
         * {
             margin: 0;
             padding: 0;
+        }
+        .source {
+            position: absolute;
+            z-index: 1000;
+            top: 50px;
+            right: 50px;
+        }
+        pre code {
+            display: block;
+            padding: .5em;
+            background: #f0f0f0;
+            border-radius: 15px;
+            opacity: .5;
+        }
+        pre code:hover {
+            opacity: 1;
+            animation: hideShow 5s;
+            -webkit-animation: hideShow 5s;
+        }
+        @keyframes hideShow
+        {
+            from {opacity: .5;}
+            to {opacity: 1;}
         }
     </style>
 </head>
 <body>
 <div class="slide">
     <img class="fsi" src="img/lighthouse.jpg" alt="test" />
+</div>
+<div class="source">
+<pre><code class="js">
+$(document).ready(function(){
+    $(".slide").fullScreenImage({
+        imageHeight:    1440,
+        imageWidth:     2560
+    });
+});
+
+</code>
+</pre>
 </div>
 <script src="js/jquery1.9.1.min.js"></script>
 <script src="js/full-screen-image.js"></script>

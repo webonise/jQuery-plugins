@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery-plugins : " />
+    <title>Jquery-plugins</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/easing.js"></script>
+    <script src="../js/modernizr.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".hoverDiv").css("opacity", "0");
+            $(".fadeInEffect li").mouseenter(function(){
+                $(this).find('.hoverDiv').stop().animate({opacity: "1"}, 500);
+            });
+            $(".fadeInEffect li").mouseleave(function(){
+                $(this).find('.hoverDiv').stop().animate({opacity: "0"}, 500);
+            });
+
+            <!-- slide toggle js-->
+            $(".slideDiv").css("height", "0");
+            $(".slideDown li").mouseenter(function(){
+                $(this).find('.slideDiv').stop().animate({height: "100%"}, 500);
+            });
+            $(".slideDown li").mouseleave(function(){
+                $(this).find('.slideDiv').stop().animate({height: "0"}, 500);
+            });
+
+            <!-- Image Zoom Effect-->
+
+            $(".imageHover img").mouseenter(function(){
+                $(this).stop().animate({
+                        width :'120%',
+                    margin: '-10% 0 0 -10%'
+                }, 400, "linear")
+            });
+            $(".imageHover img").mouseleave(function(){
+                $(this).stop().animate({
+                        width :'100%',
+                    margin: '0'
+                }, 400, "linear")
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            overflow: hidden;
+        }
+        .hoverEffects li, .slideDown li {
+            width: 150px;
+            height: 200px;
+            float: left;
+            background: #cccccc;
+            margin-right: 20px;
+            position: relative;
+            padding: 0;
+            z-index: 1;
+            color: red;
+        }
+        .hoverEffects li a , .slideDown li a {
+            color: #ffffff;
+        }
+        .listContent {
+            padding: 10px;
+        }
+        .hoverDiv {
+            background: url("images/tranparentBG.png");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 100;
+            text-align: center;
+            color: #ffffff;
+        }
+        .slideDiv {
+            background: url("images/tranparentBG.png");
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            text-align: center;
+            color: #ffffff;
+        }
+        .imageHover li {
+            width: 160px;
+            height: 178px;
+            overflow: hidden;
+            padding: 0;
+        }
+        .imageHover img {
+            margin: 0;
+            padding: 0;
+            max-width: 200%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" href="https://github.com/webonise/jQuery-plugins">View on GitHub</a>
+
+        <h1 id="project_title">Hove Effects</h1>
+        <h2 id="project_tagline"></h2>
+
+        <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/webonise/jQuery-plugins/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/webonise/jQuery-plugins/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer hoverEffects">
+    <section id="main_content" class="inner">
+        <h3>Welcome to jQuery-Hover-Effects-Plugin Pages.</h3>
+
+        <div class="container">
+            <h1>Fade In effect on hover</h1>
+            <ul class="fadeInEffect">
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="hoverDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="hoverDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="hoverDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="hoverDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+            </ul>
+            <div class="source">
+                <pre>
+                    <code class="python">
+$(document).ready(function() {
+    $(".hoverDiv").css("opacity", "0");
+        $(".fadeInEffect li").mouseenter(function(){
+            $(this).find('.hoverDiv').stop().animate({opacity: "1"}, 500);
+        });
+        $(".fadeInEffect li").mouseleave(function(){
+            $(this).find('.hoverDiv').stop().animate({opacity: "0"}, 500);
+    });
+});
+                    </code>
+                </pre>
+            </div>
+            <h1>Slide Toggle Effect on hover</h1>
+            <ul class="slideDown">
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="slideDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="slideDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="slideDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+                <li>
+                    <div class="listContent"><p>Your Content Goes Here</p></div>
+                    <div class="slideDiv"><a href="http://www.google.com" target="_blank">Google</a></div>
+                </li>
+            </ul>
+            <div class="source">
+                <pre>
+                    <code class="js">
+
+
+$(document).ready(function(){
+    $(".slideDiv").css("height", "0");
+    $(".slideDown li").mouseenter(function(){
+        $(this).find('.slideDiv').stop().animate({height: "100%"}, 500);
+    });
+    $(".slideDown li").mouseleave(function(){
+        $(this).find('.slideDiv').stop().animate({height: "0"}, 500);
+    });
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="inner">
+        <h3>Welcome to jQuery-Hover-Effects-Plugin Pages.</h3>
+
+        <div class="container">
+            <h1>Image Zoom effect on hover</h1>
+                <ul class="imageHover">
+                    <li>
+                        <img src="images/1146696_559027954134917_1369616698_n.jpg" />
+                    </li>
+                    <li>
+                        <img src="images/1146696_559027954134917_1369616698_n.jpg" />
+                    </li>
+                    <li>
+                        <img src="images/1146696_559027954134917_1369616698_n.jpg" />
+                    </li>
+
+                </ul>
+            <div class="source">
+                <pre>
+                    <code class="js">
+
+$(".imageHover img").mouseenter(function(){
+    $(this).stop().animate({
+        width :'120%',
+        margin: '-10% 0 0 -10%'
+        });
+    });
+    $(".imageHover img").mouseleave(function(){
+        $(this).stop().animate({
+        width :'100%',
+        margin: '0'
+    });
+});
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+        <p class="copyright">Jquery-plugins maintained by <a href="https://github.com/webonise">webonise</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+    </footer>
+</div>
+
+
+
+</body>
+</html>
+
