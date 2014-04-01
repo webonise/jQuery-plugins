@@ -18,8 +18,8 @@ http://webonise.github.io/jQuery-plugins/jquery-accordion/jquery-accordion.html
 ### 3. jQurey-hover-effects page
 http://webonise.github.io/jQuery-plugins/jquery-hover-effects/jquery-hover-effects.html
 
-### 4. jQurey-hover-effects page
+### 4. jQurey-tabs page
 http://webonise.github.io/jQuery-plugins/jquery-tabs/jquery-tabs.html
 
-### 5. jQurey-tabs page
-http://webonise.github.io/jQuery-plugins/jquery-tabs/jquery-tabs.html
+### 5. jQuery Custom Responsive Menu page
+http://webonise.github.io/jQuery-plugins/jquery-responsive-menu/responsive-menu.html
