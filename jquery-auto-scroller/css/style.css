@@ -1,0 +1,38 @@
+.slide{
+	width: 752px;
+	margin-right: 10px;
+	height: 411px;
+	background:#ccc;
+	float: left
+}
+.scroller{
+	position: relative;
+}
+.img{
+	width: 752px;
+	height: 411px;
+	padding: 0;
+	margin: 0;
+	border:0;
+}
+.scrollerWrap{
+width: 100%;
+overflow: hidden;
+}
+
+.scrollBar{
+	height: 10px;
+	width: 80%;
+	margin: 20px auto;
+	background: #ddd;
+	position: relative;
+	overflow: hidden;
+
+}
+.scrollBar .SBInner{
+	position: absolute;
+	width: 25%;
+	height: 10px;
+	background:#888;
+
+}
