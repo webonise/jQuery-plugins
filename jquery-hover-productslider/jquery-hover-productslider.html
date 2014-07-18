@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery-plugins : " />
+    <title>Jquery-plugins</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/productSlider.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".tabs").hide();
+            $(".tabs:first").show();
+            $(".tabMenu li a").click(function () {
+                var tablink = $(this).attr('href');
+                $(".tabs").hide();
+                $(tablink).show();
+                $(this).parents(".tabMenu").find('li').removeClass("active");
+                $(this).parents(".tabMenu li").addClass("active");
+                return false;
+            });
+
+            <!-- Fade in effect-->
+            $(".tabMenu2 li a").click(function () {
+                var tablink = $(this).attr('href');
+                $(".tabs2").fadeOut();
+                $(tablink).fadeIn();
+                $(this).parents(".tabMenu2").find('li').removeClass("active");
+                $(this).parents(".tabMenu2 li").addClass("active");
+                return false;
+            });
+
+            <!--slide Effect-->
+            $(".tabs3").hide();
+            $(".tabs3:first").show();
+            $(".tabMenu3 li a").click(function () {
+                var tablink = $(this).attr('href');
+                $(".tabs3").slideUp();
+                $(tablink).slideDown();
+                $(this).parents(".tabMenu3").find('li').removeClass("active");
+                $(this).parents(".tabMenu3 li").addClass("active");
+                return false;
+            });
+
+        });
+    </script>
+    <style>
+        .productList{
+    overflow: hidden;
+    text-align: center;
+}
+.productList .item{
+    list-style: none;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    padding: 0;
+    /*width: 320px;*/
+}
+
+.productList .item img{
+    width: 280px;
+    height: 400px;
+    margin: 0;
+    background: #fff;
+}
+.dataPager{
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    text-align: center;
+}
+.dataPager li{
+    list-style: none;
+    height: 6px;
+    width: 20px;
+    border-radius: 3px;
+    background: #ccc;
+    display: inline-block;
+    margin: 2px;
+    padding: 0;
+
+}
+.dataPager li.active{
+    background: #00ade3;
+}
+h3{
+    text-align: center;
+}
+
+    </style>
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" href="https://github.com/webonise/jQuery-plugins">View on GitHub</a>
+
+        <h1 id="project_title">Jquery Hover Product Slider</h1>
+        <h2 id="project_tagline"></h2>
+
+        <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/webonise/jQuery-plugins/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/webonise/jQuery-plugins/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" >
+        <h3>Welcome to jQuery-hover-productSlider-Plugin Pages.</h3>
+        <ul class="productList">
+    <li class="item">
+            <a href="#"><img src="images/1.jpg"></a>
+            <a href="#"><img src="images/2.jpg"></a>
+            <a href="#"><img src="images/3.jpg"></a>
+            <a href="#"><img src="images/4.jpg"></a>
+            <div>Content</div>
+    </li>
+
+    <li class="item">
+            <a href="#"><img src="images/5.jpg"></a>
+            <a href="#"><img src="images/6.jpg"></a>
+            <a href="#"><img src="images/7.jpg"></a>
+            <a href="#"><img src="images/8.jpg"></a>
+             <a href="#"><img src="images/9.jpg"></a>
+            <a href="#"><img src="images/10.jpg"></a>
+            <a href="#"><img src="images/11.jpg"></a>
+            <a href="#"><img src="images/12.jpg"></a>
+            <div>Content</div>
+    </li>
+    <li class="item">
+            <a href="#"><img src="images/13.jpg"></a>
+            <!-- <a href="#"><img src="images/2.jpg"></a> -->
+            <div>Content</div>
+    </li>
+    <li class="item">
+            <a href="#"><img src="images/14.jpg"></a>
+            <a href="#"><img src="images/1.jpg"></a>
+            <a href="#"><img src="images/2.jpg"></a>
+            <a href="#"><img src="images/3.jpg"></a>
+            <a href="#"><img src="images/4.jpg"></a>
+            <a href="#"><img src="images/5.jpg"></a>
+            <div>Content</div>
+    </li>
+    <li class="item">
+            <a href="#"><img src="images/6.jpg"></a>
+            <a href="#"><img src="images/7.jpg"></a>
+            <a href="#"><img src="images/8.jpg"></a>
+            <a href="#"><img src="images/9.jpg"></a>
+            <a href="#"><img src="images/10.jpg"></a>
+            <a href="#"><img src="images/11.jpg"></a>
+            <a href="#"><img src="images/12.jpg"></a>
+            <a href="#"><img src="images/13.jpg"></a>
+            <div>Content</div>
+    </li>
+
+  </ul>
+    </section>
+</div>
+
+
+</body>
+</html>

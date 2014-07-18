@@ -23,3 +23,9 @@ http://webonise.github.io/jQuery-plugins/jquery-tabs/jquery-tabs.html
 
 ### 5. jQuery Custom Responsive Menu page
 http://webonise.github.io/jQuery-plugins/jquery-responsive-menu/responsive-menu.html
+
+### 6. jQuery Auto Scroller
+http://webonise.github.io/jQuery-plugins/jquery-auto-scroller/jquery-auto-scroller.html
+
+### 7. jQuery Hover Product Slider
+http://webonise.github.io/jQuery-plugins/jquery-hover-productslider/jquery-hover-productslider.html
