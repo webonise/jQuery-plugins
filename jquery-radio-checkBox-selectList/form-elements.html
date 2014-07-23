@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jquery-plugins : " />
+    <title>Jquery-plugins</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="../js/modernizr.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" href="https://github.com/webonise/jQuery-plugins">View on GitHub</a>
+
+        <h1 id="project_title">Radio Button, CheckBox, Select List</h1>
+        <h2 id="project_tagline"></h2>
+
+        <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/webonise/jQuery-plugins/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/webonise/jQuery-plugins/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <div class="container1">
+            <h1>Radio Button</h1> 
+            <form>
+                <ul>
+                    <li>
+                        <input type="radio" name="software" id="html1" value="HTML">
+                    </li>
+                    <li>
+                       <input type="radio" name="software" id="css1" value="CSS">
+                    </li>
+                     <li>
+                        <input type="radio" name="software" id="jquery1" value="jQuery" disabled="disabled">
+                    </li>
+                    <li>
+                       <input type="radio" name="software" id="javascript1" value="Javascript" disabled="disabled" checked="checked">
+                    </li>
+                </ul>
+            </form> 
+
+<h2>HTML</h2>
+<div class="source">
+    <pre>
+        <code class="python">
+&lt;input type="radio" name="software" id="html" value="HTML"&gt;
+        </code>
+    </pre>
+</div>
+                <h2>JS</h2>
+            <div class="source">
+                <pre>
+                    <code class="python">
+var _customRadioButton = function(){
+    $("input[type='radio']").each(function(){
+        if(this.checked){
+            if(this.disabled)
+                $(this).wrap("&lt;span class='radioWrap checked disabled'&gt;&lt;/span&gt;");
+            else
+                $(this).wrap("&lt;span class='radioWrap checked'&gt;&lt;/span&gt;");
+        }
+        else{
+            if(this.disabled)
+                $(this).wrap("&lt;span class='radioWrap disabled'&gt;&lt;/span&gt;");
+            else
+                $(this).wrap("&lt;span class='radioWrap'&gt;&lt;/span&gt;");  
+        }
+        $(this).parent().after("&lt;label for="+ $(this).attr("id")+">"+ $(this).attr("value") +"&lt;/label&gt;")
+    });
+
+    $(document).on("change","input[type='radio']", function () {
+        $("input[name="+ $(this).attr("name") +"]").parent().removeClass("checked");
+        $(this).parent().addClass("checked");
+    });
+}                </code>
+                </pre>
+            </div>          
+            <h1>Check Box</h1>
+            <form>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="knowledge" id="html" value="HTML" checked="checked">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="knowledge" id="css" value="CSS">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="knowledge" id="jquery" value="jQuery" disabled="disabled">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="knowledge" id="javascript" value="Javascript" disabled="disabled" checked="checked">
+                    </li>
+                </ul>
+            </form>  
+            <h2>HTML</h2>
+<div class="source">
+    <pre>
+        <code class="python">
+&lt;input type="checkbox" name="knowledge" id="css" value="CSS"&gt;
+        </code>
+    </pre>
+</div>
+                <h2>JS</h2>
+            <div class="source">
+                <pre>
+                    <code class="python">
+var _customCheckBox = function(){
+    $("input[type='checkbox']").each(function(){
+        if(this.checked){
+            if(this.disabled)
+                $(this).wrap("&lt;span class='checkboxWrap checked disabled'&gt;&lt;/span&gt;");
+            else
+                $(this).wrap("&lt;span class='checkboxWrap checked'>&lt;/span&gt;");
+        }
+        else{
+            if(this.disabled)
+                $(this).wrap("&lt;span class='checkboxWrap disabled'&gt;&lt;/span&gt;");
+            else
+                $(this).wrap("&lt;span class='checkboxWrap'&gt;&lt;/span&gt;");  
+        }
+        $(this).parent().after("&lt;label for="+ $(this).attr("id")+">"+ $(this).attr("value") +"&lt;/label&gt;")
+    });
+
+    $(document).on("change","input[type='checkbox']", function () {
+        $(this).parent().toggleClass("checked"); 
+    });
+}               </code>
+                </pre>
+            </div>               
+            <h1>Select List</h1>           
+            <select id="category" title="Select a category" class="linkselect">
+                <option value="">[Select]</option>
+                <option value="help_desk">Help Desk</option>
+                <option value="customer_service">Customer Service</option>
+                <option value="knowledge_manager">Knowledge Manager</option>
+                <option value="change_manager">Change Manager</option>
+                <option value="service_desk">Service Desk</option>
+                <option value="asset_manager">Asset Manager</option>
+                <option value="software_manager">Software Manager</option>
+            </select>
+            <h2>HTML</h2>
+<div class="source">
+    <pre>
+        <code class="python">
+&lt;select id="category" title="Select a category" class="linkselect"&gt;
+    &lt;option value="">[Select]&lt;/option&gt;
+    &lt;option value="help_desk">Help Desk&lt;/option&gt;
+&lt;/select&gt;
+        </code>
+    </pre>
+</div>
+                <h2>JS</h2>
+            <div class="source">
+                <pre>
+                    <code class="python">
+var _customSelect = function(){
+    $("select").wrap("&lt;div class='selectWrap'&gt;&lt;/div&gt;")
+    $(".selectWrap").prepend("&lt;div class='customSelect'&gt;&lt;/div&gt;")
+
+    $("select").each(function(){
+        $(this).prev().html($('option:selected',this).text());
+    });
+
+    $("select").click(function(){
+        $(this).prev().html($('option:selected',this).text());
+    })
+}                </code>
+                </pre>
+            </div>   
+        </div>
+    </section>
+
+
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+        <p class="copyright">Jquery-plugins maintained by - <a href="https://github.com/webonise">webonise</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+    </footer>
+</div>
+
+
+
+
+</body>
+</html>
