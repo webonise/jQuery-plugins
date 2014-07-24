@@ -30,5 +30,5 @@ http://webonise.github.io/jQuery-plugins/jquery-auto-scroller/jquery-auto-scroll
 ### 7. jQuery Hover Product Slider
 http://webonise.github.io/jQuery-plugins/jquery-hover-productslider/jquery-hover-productslider.html
 
-### 8. jQuery Custom form Element
+### 8. jQuery Custom jQuery Custom Radio Button, Check Box and Select List
 http://webonise.github.io/jQuery-plugins/jquery-radio-checkBox-selectList/form-elements.html

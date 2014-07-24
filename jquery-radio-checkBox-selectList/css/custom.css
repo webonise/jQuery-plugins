@@ -103,4 +103,12 @@ form {
 h2{
 	margin: 0;
 	font-size: 20px;
+	cursor: pointer;
+	background: url(../images/icon-toggle.png) right top no-repeat;
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 0;
+	margin-bottom: 10px
+}
+h2.active {
+	background-position: right -41px;
 }

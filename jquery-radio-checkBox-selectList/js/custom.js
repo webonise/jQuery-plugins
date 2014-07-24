@@ -62,6 +62,7 @@ $(window).load(function() {
     _customSelect();
 
     $("h2").click(function(){
+        $(this).toggleClass("active");
         $(this).next().slideToggle();
     });
 });
