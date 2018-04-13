@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Droppable - Prevent propagation</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+  .list-item {
+    background:#dff0d8;
+    margin:20px 0;
+    height:40px;
+    line-height:40px;
+    font-size:15px;
+    font-weight:700;
+    list-style-type:none;
+  }
+  .list-item span {
+    padding:0 10px;
+    background:#d9edf7;
+    display:block;
+    height:40px;
+    line-height:40px;
+    z-index: 3;
+
+  }
+  .right .list-item,
+  .right .list-item.highlight.ui-droppable-disabled{
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    cursor: inherit;
+    border: 1px dotted #ccc;
+  }
+  .right .list-item.dropped {
+    border: 0;
+  }
+  .right .list-item.highlight {
+    border: 1px dotted red;
+  }
+  .right .list-item span {
+    background: #f2dede;
+    color: #337ab7;
+    height: 40px;
+    line-height: 40px;
+    z-index: 2;
+
+  }
+
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.ui.touch-punch.js"></script>
+<script>
+  $( function() {
+
+    var droppableParent;
+
+    $('ul .draggable').draggable({
+      revert: 'invalid',
+      revertDuration: 200,
+      start: function () {
+        droppableParent = $(this).parent();    
+        $(this).addClass('being-dragged');
+      },
+      stop: function () {
+        $(this).removeClass('being-dragged');
+      }
+    });
+
+    $('ul#drop-area li').droppable({
+      hoverClass: 'highlight',
+      drop: function (event, ui) {
+        var draggable = $(ui.draggable[0]),
+        draggableOffset = draggable.offset(),
+        container = $(event.target),
+        containerOffset = container.offset();
+
+        $('.draggable', event.target).appendTo(droppableParent).css({opacity: 0}).animate({opacity: 1}, 200);
+
+        draggable.appendTo(container).css({left: draggableOffset.left - containerOffset.left, top: draggableOffset.top - containerOffset.top}).animate({left: 0, top: 0}, 200);
+      }
+    });
+  });
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center">jQuery UI with placeholder for each drag element with touch support</h2>
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-3 left">
+        <h3 class="text-center">Drag</h3>    
+        <ul class="list-unstyled">
+          <li class="list-item"><span class="draggable">A</span></li>
+          <li class="list-item"><span class="draggable">B</span></li>
+          <li class="list-item"><span class="draggable">C</span></li>
+          <li class="list-item"><span class="draggable">D</span></li>
+          <li class="list-item"><span class="draggable">E</span></li>
+        </ul>
+      </div>  
+      <div class="col-xs-3 right">
+        <h3 class="text-center">Drop</h3>
+        <ul id='drop-area' class="list-unstyled">
+          <li class="list-item droppable"></li>
+          <li class="list-item droppable"></li>
+          <li class="list-item droppable"></li>
+          <li class="list-item droppable"></li>
+          <li class="list-item droppable"></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+</body>
+</html>
