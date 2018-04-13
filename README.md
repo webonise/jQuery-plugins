@@ -32,3 +32,6 @@ http://webonise.github.io/jQuery-plugins/jquery-hover-productslider/jquery-hover
 
 ### 8. jQuery Custom Radio Button, Check Box and Select List
 http://webonise.github.io/jQuery-plugins/jquery-radio-checkBox-selectList/form-elements.html
+
+### 9. jQuery UI Match The Pairs with touch support
+http://webonise.github.io/jQuery-plugins/jquery-ui-match-the-pairs/match-the-pairs.html
